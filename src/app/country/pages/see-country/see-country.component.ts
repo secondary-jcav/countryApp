@@ -11,6 +11,7 @@ import { CountryService } from '../../services/country.service';
 })
 export class SeeCountryComponent implements OnInit {
   country!: Country;
+  timezones: string[] = [];
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -23,7 +24,10 @@ export class SeeCountryComponent implements OnInit {
         switchMap(({ id }) => this.countryService.getCountryByAlpha(id)),
         tap(console.log)
       )
-      .subscribe((country) => (this.country = country[0]));
+      .subscribe((country) => {
+        this.country = country[0];
+        this.timezones = this.country.timezones;
+      });
 
     // this.activatedRoute.params.subscribe(({ id }) => {
     //   console.log(id);
