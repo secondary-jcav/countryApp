@@ -7,7 +7,7 @@ import { Country } from '../interfaces/country.interface';
   providedIn: 'root',
 })
 export class CountryService {
-  private apiUrl: string = 'https://restcountries.com/v3.1';
+  apiUrl: string = 'https://restcountries.com/v3.1';
   constructor(private http: HttpClient) {}
 
   searchCountry(query: string): Observable<Country[]> {
