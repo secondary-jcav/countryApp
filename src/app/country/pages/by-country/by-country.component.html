@@ -9,6 +9,14 @@
     placeholder="Search Country"
   ></app-country-input>
 </div>
+<ul class="list-group">
+  <li
+    class="list-group-item list-group-item-action"
+    *ngFor="let country of suggestedCountries"
+  >
+    <a [routerLink]="['/country', country.cca2]"> {{ country.name.common }}</a>
+  </li>
+</ul>
 <hr />
 <div *ngIf="isErrored" class="alert alert-danger">No country found</div>
 

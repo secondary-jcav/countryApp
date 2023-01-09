@@ -11,6 +11,7 @@ export class ByCountryComponent {
   searchTerm: string = '';
   isErrored: boolean = false;
   countries: Country[] = [];
+  suggestedCountries: Country[] = [];
 
   constructor(private countryService: CountryService) {}
 
@@ -33,5 +34,10 @@ export class ByCountryComponent {
 
   suggest(receivedKeys: string) {
     this.isErrored = false;
+
+    this.countryService.searchCountry(receivedKeys).subscribe(
+      (countries) => (this.suggestedCountries = countries.splice(0, 5)),
+      (err) => (this.suggestedCountries = [])
+    );
   }
 }

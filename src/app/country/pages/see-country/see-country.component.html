@@ -25,9 +25,16 @@
         <li class="list-group-item">
           <strong>Area </strong>{{ country.area | number }}
         </li>
-        <li class="list-group-item" *ngFor="let timezone of timezones">
-          <strong>Time zone : {{ timezone }} </strong>
+        <li class="list-group-item">
+          <strong>Currency </strong>{{ currency }}
         </li>
+        <li class="list-group-item">
+          <strong>Continent </strong>{{ country.continents[0] }}
+        </li>
+
+        <!-- <li class="list-group-item" *ngFor="let timezone of timezones">
+          <strong>Time zone : {{ timezone }} </strong>
+        </li> -->
       </ul>
     </div>
   </div>

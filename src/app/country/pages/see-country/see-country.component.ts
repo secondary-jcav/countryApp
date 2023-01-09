@@ -12,6 +12,8 @@ import { CountryService } from '../../services/country.service';
 export class SeeCountryComponent implements OnInit {
   country!: Country;
   timezones: string[] = [];
+  currency: string = '';
+  //currency: string = '' ;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -27,6 +29,7 @@ export class SeeCountryComponent implements OnInit {
       .subscribe((country) => {
         this.country = country[0];
         this.timezones = this.country.timezones;
+        this.currency = Object.keys(this.country.currencies)[0];
       });
 
     // this.activatedRoute.params.subscribe(({ id }) => {
