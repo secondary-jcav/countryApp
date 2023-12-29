@@ -1,27 +1,37 @@
 # CountryApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.2.
+CountryApp is an Angular-based web application that utilizes the REST Countries API (https://restcountries.com) to provide information about different countries. Users can search for a specific country to get details like population, area, and currency. Additionally, the app allows searching for countries by region or capital.
 
-## Development server
+## Prerequisites
+
+Before you begin, ensure you have the following requirements installed:
+- Node.js (Version 14 or newer)
+- npm (Version 6 or newer)
+
+## Setting Up the Project
+
+To get the project up and running on your local machine:
+
+1. Clone the repository:
+`git clone https://github.com/secondary-jcav/countryApp.git`
+
+2. Navigate to the project directory:
+`cd countryApp`
+
+3. Install dependencies
+`npm install`
+
+## Configuration
+
+No additional configuration is required as the application uses the public REST Countries API.
+
+## Development Server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Search by Country**: Find detailed information about a country, including population, area, and currency.
+- **Search by Region**: Filter countries based on their geographic region.
+- **Search by Capital**: Look up countries by their capital cities.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
